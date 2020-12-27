@@ -12,7 +12,8 @@
 # sed -i '238c CONFIG_ATH79_MACH_TL_WR841N_V9=y' target/linux/ar71xx/config-4.14
 
 echo "添加软件源..."
-echo "src/gz simonsmh https://github.com/simonsmh/openwrt-dist/raw/packages/rockchip/armv8/" >> ./repositories.conf
+{ echo -n 'https://github.com/simonsmh/openwrt-dist/raw/packages/rockchip/armv8/> '; cat ./repositories.conf; } > new.conf
+mv new.conf ./repositories.conf
 
 cat ./repositories.conf
 

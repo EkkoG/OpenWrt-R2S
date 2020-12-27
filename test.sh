@@ -1,0 +1,2 @@
+a=https://github.com/simonsmh/openwrt-dist/raw/packages/rockchip/armv8/
+sed -i "s/.*custom.*/PasswordAuthentication no/g" /Users/ciel/Downloads/openwrt-imagebuilder-rockchip-armv8.Linux-x86_64/repositories.conf
