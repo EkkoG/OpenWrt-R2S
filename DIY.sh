@@ -11,7 +11,10 @@
 # sed -i '567c $(Device/tplink-8mlzma)' target/linux/ar71xx/image/tiny-tp-link.mk
 # sed -i '238c CONFIG_ATH79_MACH_TL_WR841N_V9=y' target/linux/ar71xx/config-4.14
 
+echo "添加软件源..."
 echo "src/gz simonsmh https://github.com/simonsmh/openwrt-dist/raw/packages/rockchip/armv8/" >> ./repositories.conf
+
+cat ./repositories.conf
 
 # 最新版本查看 https://github.com/vernesong/OpenClash/releases
 LUCI_APP_OPENCLASH_VERSION=0.41.13-beta
