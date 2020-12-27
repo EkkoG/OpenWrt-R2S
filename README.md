@@ -1,10 +1,10 @@
 ### 介绍
 
-自用 OpenWrt-x86_64 镜像
+自用 OpenWrt-R2S 镜像
 
 ### 特色
 
-- 采用官方原版 19.07.5 ImageBuilder 构建，可按照官方提供的方式进行自定义
+- 采用官方原版 Snapshot ImageBuilder 构建，可按照官方提供的方式进行自定义
 - 集成 [OpenClash](https://github.com/vernesong/OpenClash)，开箱即用
 
 ### 截图
