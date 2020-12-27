@@ -15,9 +15,9 @@
 
 
 # 最新版本查看 https://github.com/vernesong/OpenClash/releases
-LUCI_APP_OPENCLASH_VERSION=0.41.08-beta
+LUCI_APP_OPENCLASH_VERSION=0.41.13-beta
 # 最新版本查看 https://github.com/vernesong/OpenClash/releases/tag/TUN-Premium
-CLASH_TUN_FILE_NAME=clash-linux-amd64-2020.11.23.g4474306.gz
+CLASH_TUN_FILE_NAME=clash-linux-armv8-2020.12.18.gaf66a7a.gz
 
 work_dir=$(pwd)
 
@@ -42,9 +42,9 @@ cd openclash_tmp
 
 echo "下载 clash..."
 #/etc/openclash/core/clash
-wget https://github.com/vernesong/OpenClash/releases/download/Clash/clash-linux-amd64.tar.gz
+wget https://github.com/vernesong/OpenClash/releases/download/Clash/clash-linux-armv8.tar.gz
 mkdir clash_tmp
-tar -xzvf clash-linux-amd64.tar.gz -C ./clash_tmp
+tar -xzvf clash-linux-armv8.tar.gz -C ./clash_tmp
 cd ./clash_tmp
 
 if [ ! -f "clash" ]; then
@@ -54,7 +54,7 @@ chmod +x clash
 cp ./* "$work_dir/files/etc/openclash/core/"
 cd ..
 rm -rf clash_tmp
-rm clash-linux-amd64.tar.gz 
+rm clash-linux-armv8.tar.gz 
 
 echo "下载 clash_tun..."
 sudo -E apt-get -qq install gzip
@@ -74,9 +74,9 @@ rm $CLASH_TUN_FILE_NAME
 
 echo "下载 clash_game"
 # /etc/openclash/core/clash_game
-wget -q https://github.com/vernesong/OpenClash/releases/download/TUN/clash-linux-amd64.tar.gz 
+wget -q https://github.com/vernesong/OpenClash/releases/download/TUN/clash-linux-armv8.tar.gz 
 mkdir clash_tmp
-tar -xzvf clash-linux-amd64.tar.gz -C ./clash_tmp
+tar -xzvf clash-linux-armv8.tar.gz -C ./clash_tmp
 cd ./clash_tmp
 if [ ! -f "clash_game" ]; then
     ls | grep clash | xargs -I {} mv {} clash_game
@@ -85,7 +85,7 @@ chmod +x clash_game
 cp ./* "$work_dir/files/etc/openclash/core/"
 cd ..
 rm -rf clash_tmp
-rm clash-linux-amd64.tar.gz 
+rm clash-linux-armv8.tar.gz 
 
 echo "查看下载结果"
 ls "$work_dir/files/etc/openclash/core/"
