@@ -18,7 +18,9 @@ cat repositories.conf >> new.conf
 
 mv new.conf ./repositories.conf
 
-wget https://github.com/simonsmh/openwrt-dist/raw/master/simonsmh-dist.pub -O keys/d3k4m5p7q8r2j3k4
+wget https://github.com/simonsmh/openwrt-dist/raw/master/simonsmh-dist.pub -O ./keys/12bd84d19e263f64
+
+ls ./keys
 
 cat ./repositories.conf
 
